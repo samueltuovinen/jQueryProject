@@ -3,8 +3,9 @@ body {
     font-family: serif;
 }
 #container {
-    width: 450px;
-	margin: 100px auto;
+    width: 500px;
+    margin: 100px auto;
+    text-align: center;
 }
 h1 {
     color: rgb(109, 138, 188);
@@ -19,6 +20,7 @@ h1 {
 .fa-eye-slash {
     float: right;
     color: rgb(109, 138, 188);
+    cursor: pointer;
 }
 .fa-eye-slash:hover {
     color: white;
