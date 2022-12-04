@@ -1,21 +1,13 @@
 $(document).ready(function () {
-    // merkataan item completed
-    $("ul").on("click", "li", function () {
-        $(this).toggleClass("completed");
+
+    // mahdollisuus piilottaa input fieldi
+    $(".fa-eye-slash").click(function () {
+        $("input[type='text']").fadeToggle();
+        $("i[class='fa-solid fa-arrow-turn-down iconsubmit'").fadeToggle();
     });
 
-    // poistetaan itemi listalta
-    $('ul').on("click", "span", function(event) {
-        // lisätään fadeOut
-        $(this).parent().fadeOut(500, function() {
-            // ja remove
-            $(this).remove();
-        });
-        event.stopPropagation();
-    });
-
-    // Syötetään input enterillä
-    $("input[type='text']").keypress(function(event) {
+     // Syötetään input enterillä
+     $("input[type='text']").keypress(function(event) {
         if (event.which === 13) {
             // tarkistaa onko input field tyhjä
             if ($("input").val().length === 0) {
@@ -34,11 +26,18 @@ $(document).ready(function () {
         } 
     }); 
 
-
-    // mahdollisuus piilottaa input fieldi
-    $(".fa-eye-slash").click(function () {
-        $("input[type='text']").fadeToggle();
-        $("i[class='fa-solid fa-arrow-turn-down iconsubmit'").fadeToggle();
+    // merkataan item completed
+    $("ul").on("click", "li", function () {
+        $(this).toggleClass("completed");
     });
 
+    // poistetaan itemi listalta
+    $('ul').on("click", "span", function(event) {
+        // lisätään fadeOut
+        $(this).parent().fadeOut(500, function() {
+            // ja remove
+            $(this).remove();
+        });
+        event.stopPropagation();
+    });
 });
