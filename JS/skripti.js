@@ -5,7 +5,7 @@ $(document).ready(function () {
         $("input[type='text']").fadeToggle();
     });
 
-     // Syötetään input enterillä
+     // Syötetään input 
      $("input[type='text']").keypress(function(event) {
         if (event.which === 13) {
             // tarkistaa onko input field tyhjä
@@ -37,6 +37,5 @@ $(document).ready(function () {
             // ja remove
             $(this).remove();
         });
-        event.stopPropagation();
     });
 });
