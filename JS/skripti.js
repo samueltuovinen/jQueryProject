@@ -3,7 +3,6 @@ $(document).ready(function () {
     // mahdollisuus piilottaa input fieldi
     $(".fa-eye-slash").click(function () {
         $("input[type='text']").fadeToggle();
-        $("i[class='fa-solid fa-arrow-turn-down iconsubmit'").fadeToggle();
     });
 
      // Syötetään input enterillä
